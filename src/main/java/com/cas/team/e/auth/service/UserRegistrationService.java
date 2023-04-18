@@ -55,7 +55,7 @@ public class UserRegistrationService {
         HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
     }
 
-    public LoginUser getLoginUserTicket(LoginUser loginUser) {
+    public LoginUser getLoginUserTicket(LoginUser loginUser) throws Exception {
         try {
             disableCertificateValidation();
 
@@ -84,7 +84,7 @@ public class UserRegistrationService {
             in.close();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new Exception("login was not successful");
         }
 
         return loginUser;

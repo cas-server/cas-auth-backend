@@ -19,7 +19,7 @@ public class UserRegistrationController {
     private final UserRegistrationService userRegistrationService;
 
     @PostMapping("/login")
-    public ResponseEntity<String> loginUser(@RequestBody LoginUser loginUser) {
+    public ResponseEntity<String> loginUser(@RequestBody LoginUser loginUser) throws Exception {
         LoginUser user = userRegistrationService.getLoginUserTicket(loginUser);
         return new ResponseEntity<>(user.getUsername(), HttpStatus.CREATED);
     }
