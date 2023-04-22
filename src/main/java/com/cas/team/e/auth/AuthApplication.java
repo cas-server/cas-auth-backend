@@ -22,7 +22,7 @@ public class AuthApplication {
 		corsConfiguration.setAllowCredentials(true);
 		corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
 		corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
-				"Accept", "Authorization", "Origin, Accept", "X-Request-Headers"));
+				"Accept", "Authorization", "cas-ticket", "Origin, Accept", "X-Request-Headers"));
 		corsConfiguration.setExposedHeaders(Arrays.asList("Origin", "Content-Type", "Accept", "Authorization",
 				"Access-Control-Allow-Origin", "Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"));
 		corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));

@@ -16,11 +16,13 @@ public class User {
     private String username;
     private String password;
     private String email;
+    private String permission;
 
-    public User (String username, String email, String password) {
+    public User (String username, String email, String password, String permission) {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.permission = permission;
     }
 
     public User() {
